@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <RelativeLayout
+        android:id="@+id/post_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+
+        android:background="@drawable/background_bottom_line"
+        >
+
+        <ImageButton
+            android:id="@+id/back_post"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_back"
+            android:background="#fff"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/postBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="#fff"
+            android:text="Post"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#2979FF"
+            />
+
+    </RelativeLayout>
+
+
+    <com.example.ld1.Utilities.SquareImageView
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:padding="2dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/background_light_white_box"
+        android:layout_below="@id/post_toolbar"
+        android:id="@+id/image_to_be_posted"
+        />
+
+    <com.example.ld1.Utilities.SquareImageView
+        android:layout_width="70dp"
+        android:layout_height="0dp"
+        android:src="@drawable/collection"
+        android:layout_toLeftOf="@id/pic_people"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:padding="12dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/background_light_green_box"
+        android:layout_below="@id/post_toolbar"
+        android:id="@+id/pic_location"
+/>
+    <com.example.ld1.Utilities.SquareImageView
+        android:layout_width="70dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/mention2"
+        android:padding="12dp"
+        android:layout_alignParentRight="true"
+        android:scaleType="centerCrop"
+        android:background="@drawable/background_light_black_box"
+        android:layout_below="@id/post_toolbar"
+        android:id="@+id/pic_people"
+/>
+
+
+
+    <com.example.ld1.Utilities.SquareImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="15dp"
+        android:id="@+id/pic_collection"
+        android:src="@drawable/collect"
+        android:background="@drawable/background_light_blue_box"
+        android:layout_below="@id/pic_location"
+        android:layout_toLeftOf="@id/pic_tags"
+        android:visibility="gone"
+        />
+
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="15dp"
+        android:tint="#f00"
+        android:src="@drawable/tags"
+        android:layout_alignParentRight="true"
+
+        android:background="@drawable/background_light_red_box"
+        android:layout_below="@id/pic_location"
+        android:id="@+id/pic_tags"
+        />
+
+
+
+
+    <EditText
+        android:id="@+id/edit_text_description"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_below="@id/image_to_be_posted"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:gravity="top"
+        android:textSize="15dp"
+        android:hint="Write description..."
+        android:inputType="text|textMultiLine"
+         />
+
+
+    <TextView
+        android:id="@+id/textview_allow_comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_text_description"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:text="Allow Comments"
+        android:textColor="#000"
+        android:paddingLeft="1dp"
+        android:textSize="18dp"
+        android:layout_alignParentLeft="true"
+        />
+
+<androidx.appcompat.widget.SwitchCompat
+    android:id="@+id/allow_comments_switch"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="30dp"
+    android:checked="true"
+    android:layout_below="@id/edit_text_description"
+    android:thumb="@drawable/thumb1"
+    app:track="@drawable/track1"
+    />
+
+
+
+
+
+    <TextView
+android:id="@+id/share_global_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_allow_comments"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Share Globally"
+        android:textColor="#000"
+        android:paddingLeft="1dp"
+        android:textSize="18dp"
+        android:layout_alignParentLeft="true"
+        />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/share_global_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:checked="true"
+        android:layout_below="@id/allow_comments_switch"
+        android:thumb="@drawable/thumb1"
+        app:track="@drawable/track1"
+        />
+
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/share_global_textview"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Allow download"
+        android:textColor="#000"
+        android:paddingLeft="1dp"
+        android:textSize="18dp"
+        android:layout_alignParentLeft="true"
+        />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/allow_download_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/share_global_switch"
+        android:thumb="@drawable/thumb1"
+        app:track="@drawable/track1"
+        />
+
+
+<!--    <EditText-->
+<!--        android:id="@+id/post_location"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:textSize="18dp"-->
+<!--        android:padding="10dp"-->
+<!--        android:background="@drawable/background_light_white_box"-->
+<!--        android:hint="Location"-->
+<!--        android:elevation="@android:dimen/dialog_min_width_major"/>-->
+<!--        android:layout_below="@id/edit_text_description"-->
+
+<!--        />-->
+
+<!--    <EditText-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:textSize="18dp"-->
+<!--        android:padding="10dp"-->
+<!--        android:background="@drawable/background_light_white_box"-->
+<!--        android:hint="Add Tags"-->
+<!--        android:elevation="@android:dimen/dialog_min_width_major"-->
+<!--        android:layout_below="@id/post_location"-->
+
+
+<!--        />-->
+
+
+
+</RelativeLayout>

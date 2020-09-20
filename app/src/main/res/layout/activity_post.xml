@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostActivity">
+
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <RelativeLayout
+            android:id="@+id/post_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:background="@drawable/background_bottom_line"
+            >
+
+            <ImageButton
+                android:id="@+id/close_post"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_close"
+                android:background="#fff"
+                />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/spinner_directory"
+                android:layout_toRightOf="@id/close_post"
+                android:layout_toLeftOf="@id/nextBtn"
+
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:id="@+id/nextBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="#fff"
+                android:text="Next"
+                android:layout_centerVertical="true"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#2979FF"
+                />
+
+
+
+
+        </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="100"
+        android:orientation="vertical"
+        android:layout_below="@id/post_toolbar">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="60"
+
+         >
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/galleryImageView"
+    android:scaleType="centerCrop"
+
+    />
+            <ProgressBar
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/progressBar"
+                android:layout_centerInParent="true"
+
+                />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+               android:src="@drawable/ic_adjust"
+                app:civ_fill_color="#77202020"
+                app:civ_border_color="#77202020"
+                app:civ_border_width="5dp"
+                android:alpha="1"
+                android:tint="#fff"
+android:id="@+id/cropImageBtn"
+
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp"
+               /> >
+
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/background_curved"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gallery"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="#3F51B5"
+
+
+
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Camera"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:alpha="0.7"
+                android:layout_gravity="center_vertical"
+
+                />
+
+
+
+
+        </LinearLayout>
+
+
+<GridView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="40"
+    android:id="@+id/grid_view"
+    android:numColumns="4"
+    android:verticalSpacing="1.5dp"
+    android:horizontalSpacing="1.5dp"
+    android:stretchMode="none"
+    android:gravity="center"
+    android:layout_marginTop="1dp"
+    >
+
+
+
+
+
+</GridView>
+
+
+    </LinearLayout>
+    
+    
+
+
+</RelativeLayout>

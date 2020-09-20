@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="160sp"
+        android:background="@drawable/background_gradient_main"
+        android:id="@+id/heading"
+        />
+
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="10sp"
+        />
+
+    <ImageView
+        android:layout_width="50sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/triangle"
+        android:layout_marginTop="100sp"
+        android:layout_marginRight="-20sp"
+        android:rotation="100"
+        />
+
+
+
+    <ImageView
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_alignParentRight="true"
+
+        android:layout_marginTop="-30sp"
+        android:layout_marginRight="-35sp"
+        android:src="@drawable/designs" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome Aboard"
+        android:layout_marginLeft="20sp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:layout_marginTop="80dp"
+        android:id="@+id/welcome_txt"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login to continue"
+        android:layout_marginLeft="20dp"
+        android:textSize="18dp"
+
+        android:textColor="#fff"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/welcome_txt"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading"
+        android:text="EMAIL"
+        android:layout_marginLeft="20dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginTop="20dp"
+        android:id="@+id/email_label"
+        />
+
+    <EditText
+        android:id="@+id/email_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email_label"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="15dp"
+        android:inputType="textEmailAddress"
+        android:hint="Enter your email address"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email_box"
+        android:text="PASSWORD"
+        android:layout_marginLeft="20dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginTop="5dp"
+        android:id="@+id/password_label"
+        />
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_label"
+        app:passwordToggleEnabled="true"
+        app:hintEnabled="false"
+        >
+        <EditText
+            android:id="@+id/password_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/password_label"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="15dp"
+            android:inputType="textPassword"
+            android:hint="Enter your password"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <CheckBox
+        android:id="@+id/remember_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_box"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:checked="true"
+        android:text="Remember me"
+
+        />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/remember_me"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Log In"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:textAllCaps="false"
+        android:background="@drawable/login_button_background"
+        />
+
+
+    <TextView
+
+        android:id="@+id/forgot_password_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_box"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:text="Forgot password?"
+        android:textColor="#48c6ef"
+        android:textSize="15dp"
+
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="150dp"
+        android:layout_height="2dp"
+        android:layout_below="@id/login_button"
+        android:layout_marginTop="30dp"
+        android:background="#c2c2c2"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:id="@+id/text_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/login_button"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:textSize="15dp"
+        android:text="OR"
+        android:textColor="#000"
+        android:textStyle="bold"
+        />
+
+
+    <View
+        android:layout_width="150dp"
+        android:layout_height="2dp"
+        android:layout_below="@id/login_button"
+        android:layout_marginTop="30dp"
+        android:background="#c2c2c2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        />
+
+
+
+
+
+
+
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/text_continue"
+    android:layout_centerHorizontal="true"
+    android:paddingBottom="10dp"
+    >
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/card_login_google"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:layout_marginTop="10dp"
+
+    app:cardCornerRadius="50dp"
+    >
+
+    <ImageButton
+        android:id="@+id/login_google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/google"
+        android:padding="10dp"
+        android:gravity="left|center"
+        android:textAllCaps="false"
+        android:textColor="#000"
+        android:background="@drawable/background_google"
+        />
+
+</androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_login_github"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="50dp"
+        android:layout_toRightOf="@id/card_login_google"
+        >
+
+    <ImageButton
+        android:id="@+id/login_github"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/github50"
+        android:gravity="left|center"
+        android:textAllCaps="false"
+        android:textColor="#000"
+        android:background="@drawable/background_google"
+        />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_login_twitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="50dp"
+        android:layout_toRightOf="@id/card_login_github"
+        >
+
+
+
+
+    <ImageButton
+        android:id="@+id/login_twitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/phone3"
+        android:layout_toRightOf="@id/login_github"
+
+        android:padding="5dp"
+        android:gravity="left|center"
+        android:textAllCaps="false"
+        android:textColor="#000"
+        android:background="@drawable/background_google"
+        />
+
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_above="@+id/goto_register_button"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="15dp"
+        android:text="Don't have an account yet?"
+
+        />
+
+    <Button
+        android:id="@+id/goto_register_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Create an Account"
+        android:textAllCaps="false"
+        android:textSize="18dp"
+        android:textColor="#000"
+
+        android:background="@drawable/background_white_box"
+        />
+
+
+
+</RelativeLayout>

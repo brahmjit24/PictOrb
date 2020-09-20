@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.ExploreFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    
+    <LinearLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="7.5dp"
+        android:paddingBottom="7.55dp"
+        android:background="@drawable/background_bottom_line"
+        >
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:hint="Search"
+            android:singleLine="true"
+            android:background="@drawable/background_light_white_box"
+            android:drawableLeft="@drawable/ic_search"
+            android:padding="5dp"
+            android:textSize="18dp"
+            />
+        <Button
+            android:id="@+id/cancel_search"
+            android:layout_weight="0"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_close"
+            android:text="cancel"
+            android:visibility="gone"
+            android:textSize="18dp"
+            android:textAllCaps="false"
+            android:background="#fff"
+            android:textColor="#DD2C00"
+            />
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bar"
+        android:background="#fff"
+        android:visibility="gone"
+        android:id="@+id/recycler_view"
+        />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bar"
+        android:background="#fff"
+        android:id="@+id/recycler_view_global"
+        />
+
+
+
+</RelativeLayout>

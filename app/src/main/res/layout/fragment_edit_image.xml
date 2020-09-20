@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+
+    tools:context=".Fragment.ImageEditorFragments.EditImageFragment">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:paddingBottom="5dp"
+       android:paddingTop="5dp"
+       >
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Brightness"
+           android:textStyle="bold"
+           android:textSize="18sp"
+           android:textColor="#8a8889"
+           />
+       <SeekBar
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:thumb="@drawable/ic_brightness"
+           android:progress="50"
+           android:thumbTint="#f00"
+           android:progressTint="#2196F3"
+           android:id="@+id/seekbar_brightness"
+           />
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contrast"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#8a8889"
+            />
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:thumb="@drawable/ic_contrast"
+            android:progress="50"
+            android:thumbTint="#f00"
+            android:progressTint="#2196F3"
+            android:id="@+id/seekbar_constrant"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saturation"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#8a8889"
+            />
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:thumb="@drawable/ic_saturation"
+            android:progress="50"
+            android:thumbTint="#f00"
+            android:progressTint="#2196F3"
+
+            android:id="@+id/seekbar_saturation"
+            />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinator"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:id="@+id/post_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:background="@drawable/background_bottom_line"
+        >
+
+        <ImageButton
+            android:id="@+id/back_post"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_back"
+            android:background="#fff"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/nextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="#fff"
+            android:text="Next"
+            android:layout_centerVertical="true"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#2979FF"
+            />
+
+
+
+
+    </RelativeLayout>
+
+    <com.example.ld1.Utilities.SquareImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="2dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/background_light_white_box"
+        android:layout_below="@id/post_toolbar"
+        android:id="@+id/image_to_be_filtered"
+        />
+
+    <com.example.ld1.Utilities.NonSwipeableViewPager
+        android:layout_width="match_parent"
+        android:id="@+id/viewPager"
+        android:layout_height="120dp"
+        android:layout_below="@id/image_to_be_filtered"
+        android:layout_above="@id/tabs"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+        />
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tabs"
+        android:layout_alignParentBottom="true"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+       />
+
+</RelativeLayout>

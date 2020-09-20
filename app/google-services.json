@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "658777626096",
+    "firebase_url": "https://social-media-app-brahmjit24.firebaseio.com",
+    "project_id": "social-media-app-brahmjit24",
+    "storage_bucket": "social-media-app-brahmjit24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658777626096:android:5471270e0d7fe085057935",
+        "android_client_info": {
+          "package_name": "com.example.ld1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "658777626096-1vja6eju9kv3ia8k14a9op7no612sfd5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABJLI6Jg9qGc7q7LwAl0fndVjh7WNsiPA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "658777626096-1vja6eju9kv3ia8k14a9op7no612sfd5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
